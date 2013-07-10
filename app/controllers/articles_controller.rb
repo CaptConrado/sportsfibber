@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  http_basic_authenticate_with :name => "frodo", :password => "thering" , except: :display
+  http_basic_authenticate_with :name => "frodo", :password => "thering" , except: :display && :show
   # GET /articles
   # GET /articles.json
   def index
