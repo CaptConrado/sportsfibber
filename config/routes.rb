@@ -2,6 +2,9 @@ Catchupsports::Application.routes.draw do
   resources :articles
 
 
+  root :to => "articles#display"
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

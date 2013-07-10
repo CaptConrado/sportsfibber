@@ -9,6 +9,9 @@ class ArticlesController < ApplicationController
       format.json { render json: @articles }
     end
   end
+  def display
+    @articles = Article.all
+  end
 
   # GET /articles/1
   # GET /articles/1.json
