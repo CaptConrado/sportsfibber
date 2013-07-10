@@ -1,0 +1,43 @@
+<center><img src="https://dl.dropboxusercontent.com/u/19000002/SF.png"></center>
+
+<div id='mySwipe' style='max-width:500px;margin:0 auto' class='swipe'>
+  <div class='swipe-wrap'>
+
+    <!-- This is a thing -->
+    
+
+
+    <% @articles.each do |article| %>
+    <div>
+
+      <h3><%= article.title %> </h3>
+      <i>
+        "<%= article.quote %>"  
+        
+         
+      </i>
+      
+
+      <center>
+     <%= link_to 'Show', article %> 
+     <%= link_to 'Edit', edit_article_path(article) %> 
+     <%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %> 
+     </center>
+    </div>
+     
+     <% end %>
+    <!-- k -->
+  </div>
+</div>
+
+
+
+<div style='text-align:center;padding-top:20px;'>
+  
+  <button onclick='mySwipe.prev()'>prev</button> 
+  <button onclick='mySwipe.next()'>next</button>
+
+</div>
+
+
+<%= link_to 'New Passage', new_article_path %>
