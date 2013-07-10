@@ -1,7 +1,9 @@
 class ArticlesController < ApplicationController
+  http_basic_authenticate_with :name => "frodo", :password => "thering" , except: :display
   # GET /articles
   # GET /articles.json
   def index
+
     @articles = Article.all
 
     respond_to do |format|

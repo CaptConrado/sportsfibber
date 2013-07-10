@@ -4,6 +4,8 @@ Catchupsports::Application.routes.draw do
 
   root :to => "articles#display"
 
+  match '/admin' => 'articles#index'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
